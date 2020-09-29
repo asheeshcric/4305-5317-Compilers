@@ -75,7 +75,7 @@ void _setTokenPos();
   return tok_ID;
 }
 
-[+-]?[0-9]+  {
+[0-9]+  {
   _setTokenPos();
 
   yylval.intval = atoi( yytext );
@@ -101,7 +101,7 @@ void _setTokenPos();
   return tok_PERIOD;
 }
 
-[+-]?[0-9]*[.][0-9]*[eE]?[+-]?[0-9]*  {
+[0-9]*[.][0-9]*[eE]?[+-]?[0-9]*  {
   _setTokenPos();
 
   yylval.dblval = atof( yytext );
