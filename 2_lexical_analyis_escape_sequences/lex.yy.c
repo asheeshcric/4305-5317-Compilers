@@ -1926,7 +1926,8 @@ int main( int argc, char *argv[] )
   // Get the tokens one-by-one.
   int tok;
   while ( ( tok = yylex() ) ) {
-    printf( "(%d:%d-%d) ", yylineno, yycolnoBegin, yycolnoEnd );
+    if (tok != tok_COMMENT_LIT)
+      printf( "(%d:%d-%d) ", yylineno, yycolnoBegin, yycolnoEnd );
 
     switch ( tok ) {
       case ':' :  case ',' :  case '.' :  case ';' :  case '+' :  case '-' :  case '*' :  case '/' :
