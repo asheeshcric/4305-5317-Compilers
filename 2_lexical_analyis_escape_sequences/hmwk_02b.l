@@ -69,11 +69,23 @@ DIGIT         [0-9]
 
 EXPONENT      [eE][-+]?[0-9]+
 
+CHARESCAPE    [\\][abfnrtv'"\\\?]
+OCTALESCAPE   ['\\][0-3]?[0-7]?[0-7][']
+HEXESCAPE     ['\\][x][0-9a-fA-F][0-9a-fA-F]?
+
 %% //---- RULES --------------------------------------------------
 
 [:,.;]   { _setTokenPos();  return yytext[0]; }
 
 [-+*\/]   { _setTokenPos();  return yytext[0]; }
+
+
+[']((.?)|({CHARESCAPE}))['] {
+  _setTokenPos();
+
+  return tok_CHAR_LIT;
+}
+
 
 ["][^\n"]*["]  {
   _setTokenPos();
@@ -174,6 +186,10 @@ int main( int argc, char *argv[] )
     switch ( tok ) {
       case ':' :  case ',' :  case '.' :  case ';' :  case '+' :  case '-' :  case '*' :  case '/' :
         printf( "%s\n", charTokenNames[ strchr( charTokens, tok ) - charTokens ] );
+        break;
+
+      case tok_CHAR_LIT:
+        printf( "CHARACTER_LITERAL %s\n", yytext);
         break;
 
       case tok_DBL_LIT :
