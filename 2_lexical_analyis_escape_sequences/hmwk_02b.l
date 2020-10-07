@@ -87,7 +87,7 @@ HEXESCAPE     [\\][x][0-9a-fA-F][0-9a-fA-F]?
 }
 
 
-["][^\n"]*["]  {
+["][^"\n\\]*(?:({CHARESCAPE}|{OCTALESCAPE}|{HEXESCAPE})[^"\n\\]*)*["]  {
   _setTokenPos();
 
   return tok_STR_LIT;
