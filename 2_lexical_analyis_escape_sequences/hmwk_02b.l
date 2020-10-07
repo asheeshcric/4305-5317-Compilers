@@ -70,8 +70,8 @@ DIGIT         [0-9]
 EXPONENT      [eE][-+]?[0-9]+
 
 CHARESCAPE    [\\][abfnrtv'"\\\?]
-OCTALESCAPE   ['\\][0-3]?[0-7]?[0-7][']
-HEXESCAPE     ['\\][x][0-9a-fA-F][0-9a-fA-F]?
+OCTALESCAPE   [\\][0-3]?[0-7]?[0-7]
+HEXESCAPE     [\\][x][0-9a-fA-F][0-9a-fA-F]?
 
 %% //---- RULES --------------------------------------------------
 
@@ -80,7 +80,7 @@ HEXESCAPE     ['\\][x][0-9a-fA-F][0-9a-fA-F]?
 [-+*\/]   { _setTokenPos();  return yytext[0]; }
 
 
-[']((.?)|({CHARESCAPE}))['] {
+[']((.?)|({CHARESCAPE})|({OCTALESCAPE})|({HEXESCAPE}))['] {
   _setTokenPos();
 
   return tok_CHAR_LIT;
