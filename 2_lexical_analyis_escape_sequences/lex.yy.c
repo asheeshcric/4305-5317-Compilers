@@ -540,9 +540,9 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "hmwk_02b.l"
 #line 2 "hmwk_02b.l"
-  // Dalio, Brian A.
-  // dalioba
-  // 2020-10-03
+  // Jaiswal, Ashish
+  // axj8734
+  // 2020-10-06
   //---- DEFINITIONS  --------------------------------------------
 /* Our input is not from an interactive source. */
 /* Don't generate the default rule. */
