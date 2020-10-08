@@ -72,6 +72,7 @@ EXPONENT      [eE][-+]?[0-9]+
 CHARESCAPE    [\\][abfnrtv'"\\\?]
 OCTALESCAPE   [\\][0-3]?[0-7]?[0-7]
 HEXESCAPE     [\\][x][0-9a-fA-F][0-9a-fA-F]?
+STRNOESCAPE   [^"\n\\]
 
 %% //---- RULES --------------------------------------------------
 
@@ -87,7 +88,7 @@ HEXESCAPE     [\\][x][0-9a-fA-F][0-9a-fA-F]?
 }
 
 
-["][^"\n\\]*(?:({CHARESCAPE}|{OCTALESCAPE}|{HEXESCAPE})[^"\n\\]*)*["]  {
+["]{STRNOESCAPE}*(?:({CHARESCAPE}|{OCTALESCAPE}|{HEXESCAPE}){STRNOESCAPE}*)*["]  {
   _setTokenPos();
 
   return tok_STR_LIT;

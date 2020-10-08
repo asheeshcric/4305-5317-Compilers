@@ -804,7 +804,7 @@ YY_DECL
 		}
 
 	{
-#line 76 "hmwk_02b.l"
+#line 77 "hmwk_02b.l"
 
 
 #line 811 "lex.yy.c"
@@ -872,17 +872,17 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 78 "hmwk_02b.l"
+#line 79 "hmwk_02b.l"
 { _setTokenPos();  return yytext[0]; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 80 "hmwk_02b.l"
+#line 81 "hmwk_02b.l"
 { _setTokenPos();  return yytext[0]; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 83 "hmwk_02b.l"
+#line 84 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -891,7 +891,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 90 "hmwk_02b.l"
+#line 91 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -900,7 +900,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 96 "hmwk_02b.l"
+#line 97 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -911,7 +911,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 104 "hmwk_02b.l"
+#line 105 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -922,7 +922,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 112 "hmwk_02b.l"
+#line 113 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -931,7 +931,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 118 "hmwk_02b.l"
+#line 119 "hmwk_02b.l"
 { 
   _setTokenPos();
   return tok_COMMENT_LIT;
@@ -939,7 +939,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 123 "hmwk_02b.l"
+#line 124 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -948,12 +948,12 @@ YY_RULE_SETUP
 case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
-#line 128 "hmwk_02b.l"
+#line 129 "hmwk_02b.l"
 { yycolnoBegin = yycolnoEnd = 0; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 130 "hmwk_02b.l"
+#line 131 "hmwk_02b.l"
 {
   _setTokenPos();
 
@@ -963,7 +963,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 137 "hmwk_02b.l"
+#line 138 "hmwk_02b.l"
 YY_FATAL_ERROR( "flex scanner jammed" );
 	YY_BREAK
 #line 970 "lex.yy.c"
@@ -1943,7 +1943,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 137 "hmwk_02b.l"
+#line 138 "hmwk_02b.l"
 
 
 char *charTokens = ":,.;+-*/";
